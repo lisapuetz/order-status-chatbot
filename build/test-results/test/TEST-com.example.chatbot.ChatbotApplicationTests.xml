@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.chatbot.ChatbotApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-04T20:55:58" hostname="Lisas-MacBook-Air.local" time="0.416">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.chatbot.ChatbotApplicationTests" time="0.416"/>
+  <system-out><![CDATA[13:55:57.451 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.chatbot.ChatbotApplicationTests]: ChatbotApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:55:57.501 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.chatbot.ChatbotApplication for test class com.example.chatbot.ChatbotApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-04T13:55:57.676-07:00  INFO 1635 --- [chatbot] [    Test worker] c.e.chatbot.ChatbotApplicationTests      : Starting ChatbotApplicationTests using Java 17.0.10 with PID 1635 (started by lisapuetz in /Users/lisapuetz/Desktop/myCode/chatbot)
+2024-10-04T13:55:57.676-07:00  INFO 1635 --- [chatbot] [    Test worker] c.e.chatbot.ChatbotApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2024-10-04T13:55:58.186-07:00  INFO 1635 --- [chatbot] [    Test worker] c.e.chatbot.ChatbotApplicationTests      : Started ChatbotApplicationTests in 0.618 seconds (process running for 1.201)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
