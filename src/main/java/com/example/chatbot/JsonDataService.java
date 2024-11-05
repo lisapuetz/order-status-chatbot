@@ -1,6 +1,6 @@
 package com.example.chatbot;
 
-import com.example.chatbot.models.Order;
+import com.example.chatbot.model.Order;
 import org.springframework.core.io.ClassPathResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
@@ -24,17 +24,17 @@ public class JsonDataService {
     }
 
 
-    public Optional<String> getOrderStatusById(String id) {
-        try {
-            List<Order> orders = readData();
-            return orders.stream()
-                    .filter(obj -> Objects.equals(obj.getId(), id))
-                    .map(Order::getStatus)
-                    .findFirst();
-        } catch (IOException e) {
-            System.err.println("Error reading data: " + e.getMessage());
-            return Optional.empty();
-        }
-    }
+//    public Optional<String> getOrderStatusById(String id) {
+//        try {
+//            List<Order> orders = readData();
+//            return orders.stream()
+//                    .filter(obj -> Objects.equals(obj.getId(), id))
+//                    .map(Order::getStatus)
+//                    .findFirst();
+//        } catch (IOException e) {
+//            System.err.println("Error reading data: " + e.getMessage());
+//            return Optional.empty();
+//        }
+//    }
 }
 

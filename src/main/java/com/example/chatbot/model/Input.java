@@ -1,8 +1,6 @@
-package com.example.chatbot.models;
+package com.example.chatbot.model;
 
 import java.util.*;
-
-import opennlp.tools.tokenize.SimpleTokenizer;
 
 public class Input extends Message {
     private TokenizerUtil tokenizerUtil;

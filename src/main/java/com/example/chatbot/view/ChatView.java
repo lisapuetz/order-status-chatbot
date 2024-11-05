@@ -1,4 +1,4 @@
-package com.example.chatbot.views;
+package com.example.chatbot.view;
 
 import java.util.Scanner;
 

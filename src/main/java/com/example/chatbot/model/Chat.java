@@ -1,4 +1,4 @@
-package com.example.chatbot.models;
+package com.example.chatbot.model;
 
 import java.util.List;
 //context management

@@ -1,13 +1,16 @@
-package com.example.chatbot.models;
+package com.example.chatbot.service;
+
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-public class Response extends Message {
-    private Map<String, String> responses;
-    private String content;
 
-    public Response() {
+@Service
+public class ResponseService {
+    private Map<String, String> responses;
+
+    public ResponseService() {
         responses = new HashMap<>();
         responses.put("noOrder", "I'm sorry, it doesn't look like that's a valid order number.");
         responses.put("pending", "Your order has been received, but not yet processed.");
@@ -24,5 +27,4 @@ public class Response extends Message {
         }
         return "I'm sorry, I'm having trouble finding an order with that order number.";
     }
-
 }

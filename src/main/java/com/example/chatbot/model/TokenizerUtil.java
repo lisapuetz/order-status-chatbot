@@ -1,4 +1,4 @@
-package com.example.chatbot.models;
+package com.example.chatbot.model;
 
 import opennlp.tools.tokenize.SimpleTokenizer;
 
