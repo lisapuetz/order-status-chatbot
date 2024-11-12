@@ -27,6 +27,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.apache.opennlp:opennlp-tools:1.9.3'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	implementation 'javax.persistence:javax.persistence-api:2.2'
 }
 
 tasks.named('test') {

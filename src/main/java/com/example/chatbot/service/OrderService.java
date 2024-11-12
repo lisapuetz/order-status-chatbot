@@ -27,14 +27,7 @@ public class OrderService {
         return Optional.ofNullable(orders.get(orderNumber));
     }
 
-    public Optional<String> getOrderStatus(String orderNumber) {
-        Optional<Order> orderOpt = getOrderById(orderNumber);
-        if (orderOpt.isPresent()) {
-            Order order = orderOpt.get();
-            return Optional.ofNullable(order.getStatus());
-        }
-        return Optional.empty();
-    }
+    public Optional<String> getOrderStatus(Order order) { return Optional.ofNullable(order.getStatus()); }
 
     public boolean updateOrderStatus(String orderNumber, String newStatus) {
         Order order = orders.get(orderNumber);

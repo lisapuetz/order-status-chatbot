@@ -1,21 +1,27 @@
 package com.example.chatbot;
 
-import com.example.chatbot.controller.ChatController;
 import com.example.chatbot.service.ChatService;
-import com.example.chatbot.service.OrderService;
-import com.example.chatbot.service.ResponseService;
-import com.example.chatbot.view.ChatView;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 
 @SpringBootApplication
-public class ChatbotApplication {
-
+public class ChatbotApplication implements CommandLineRunner {
+    @Autowired
+    private ApplicationContext context;
+    @Autowired
+    private ChatService chatService;
 	public static void main(String[] args) {
-		//SpringApplication.run(ChatbotApplication.class, args);
-        ChatService chatService = new ChatService(new OrderService(), new ResponseService(), new ChatView());
+        SpringApplication.run(ChatbotApplication.class, args);
+    }
 
+    @Override
+    public void run(String... args) throws Exception {
         chatService.startChat();
+        SpringApplication.exit(context);
     }
 
 }
