@@ -22,12 +22,6 @@ public class OrderController {
         return order.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}/status")
-    public ResponseEntity<String> updateOrderStatus(@PathVariable String id, @RequestBody String newStatus) {
-        boolean success = orderService.updateOrderStatus(id, newStatus);
-        return success ? ResponseEntity.ok("Order status updated.") : ResponseEntity.notFound().build();
-    }
-
     @PostMapping
     public ResponseEntity<String> addNewOrder(@RequestBody Order newOrder) {
         boolean success = orderService.addOrder(newOrder);

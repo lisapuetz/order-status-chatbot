@@ -29,8 +29,7 @@ public class OrderService {
 
     public Optional<String> getOrderStatus(Order order) { return Optional.ofNullable(order.getStatus()); }
 
-    public boolean updateOrderStatus(String orderNumber, String newStatus) {
-        Order order = orders.get(orderNumber);
+    public boolean updateOrderStatus(Order order, String newStatus) {
         if (order != null) {
             order.setStatus(newStatus);
             return true;
@@ -45,4 +44,23 @@ public class OrderService {
         }
         return false;
     }
+
+    public boolean isCancellable(Order order) {
+        if (getOrderStatus(order).equals("pending") || getOrderStatus(order).equals("processing")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean cancelOrder(Order order) {
+        if (isCancellable(order)) {
+            updateOrderStatus(order, "cancelled");
+            // trigger business process to cancel order (out of scope)
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

@@ -11,7 +11,6 @@ import java.util.Optional;
 
 @Component
 public class OrderStatusHandler implements ConversationFlow {
-
     @Autowired
     private OrderService orderService;
     @Autowired
@@ -19,7 +18,7 @@ public class OrderStatusHandler implements ConversationFlow {
     @Override
     public void handleConversation(ChatSession chatSession, ChatView view) {
         Optional<String> orderStatus = orderService.getOrderStatus(chatSession.getCurrOrder());
-        String statusResponse = responseService.generateResponse(orderStatus);
+        String statusResponse = responseService.generateResponse(orderStatus, "STATUS");
         view.displayResponse(statusResponse);
     }
 }
